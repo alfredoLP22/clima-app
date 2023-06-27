@@ -1,12 +1,14 @@
-import { useState } from 'react'
-import './App.css'
-import AppClima from './components/AppClima'
-
+import AppClima from "./components/AppClima";
+import { ClimaProvider } from "./context/ClimaProvider";
 function App() {
-
   return (
-    <AppClima />
-  )
+    <ClimaProvider>
+      <header>
+        <h1>Buscador de clima</h1>
+      </header>
+      <AppClima />
+    </ClimaProvider>
+  );
 }
 
-export default App
+export default App;
